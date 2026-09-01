@@ -1,0 +1,751 @@
+INFO:     127.0.0.1:62231 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62231 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51121 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51121 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51122 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51158 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51160 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51192 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51192 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51234 - "OPTIONS /api/v1/auth/login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:51350 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51350 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51350 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51525 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51525 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51525 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51525 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/usuarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/usuarios HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/roles HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/roles HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/usuarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/usuarios HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/roles HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/roles HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51523 - "OPTIONS /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51523 - "GET /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "OPTIONS /api/v1/usuarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /api/v1/usuarios HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51542 - "OPTIONS /api/v1/roles HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "OPTIONS /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /api/v1/roles HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51542 - "GET /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "OPTIONS /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51542 - "GET /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51548 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51548 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51548 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51548 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51549 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51549 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51550 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51551 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51550 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51551 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51551 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51551 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51551 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51551 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51625 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51625 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51625 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51625 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51625 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51625 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51625 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51625 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51630 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51630 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51630 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51630 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51630 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51629 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51629 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "POST /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "POST /api/v1/clientes/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "POST /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "POST /api/v1/clientes/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51631 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51631 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51631 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51632 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51694 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51694 - "POST /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51694 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51694 - "POST /api/v1/companias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51694 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51694 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51694 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51694 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "POST /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51699 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "POST /api/v1/companias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51700 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51701 - "OPTIONS /api/v1/licencias/siguiente-numero HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51701 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51700 - "GET /api/v1/licencias/siguiente-numero HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:51701 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51699 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51701 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51702 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51702 - "POST /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51702 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51702 - "POST /api/v1/licencias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51702 - "OPTIONS /api/v1/licencias/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51702 - "GET /api/v1/licencias/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51751 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "OPTIONS /api/v1/licencias/1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "POST /api/v1/licencias/1/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51752 - "OPTIONS /api/v1/licencias/1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "POST /api/v1/licencias/1/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51751 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51751 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51751 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51752 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51752 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51752 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51753 - "OPTIONS /api/v1/licencias/modulos/1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51753 - "PUT /api/v1/licencias/modulos/1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "OPTIONS /api/v1/licencias/modulos/1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "PUT /api/v1/licencias/modulos/1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51811 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51811 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51812 - "OPTIONS /api/v1/licencias/modulos/2/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51812 - "PUT /api/v1/licencias/modulos/2/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "OPTIONS /api/v1/licencias/modulos/2/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "PUT /api/v1/licencias/modulos/2/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "OPTIONS /api/v1/licencias/1/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "GET /api/v1/licencias/1/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51834 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51834 - "OPTIONS /api/v1/licencias/1/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "POST /api/v1/licencias/1/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51835 - "OPTIONS /api/v1/licencias/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "GET /api/v1/licencias/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "OPTIONS /api/v1/licencias/1/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "GET /api/v1/licencias/1/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "OPTIONS /api/v1/licencias/1/archivos/1/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51835 - "GET /api/v1/licencias/1/archivos/1/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49339 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49339 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49339 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49339 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49339 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49339 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/roles HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/roles HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/usuarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/usuarios HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/roles HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/roles HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49342 - "OPTIONS /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49342 - "GET /api/v1/roles/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49343 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49343 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49343 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49343 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49451 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49451 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49451 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49451 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49452 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49452 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49452 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49453 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49453 - "OPTIONS /api/v1/licencias/siguiente-numero HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49453 - "GET /api/v1/licencias/siguiente-numero HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:49470 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49471 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49470 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49471 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "POST /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "POST /api/v1/licencias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "GET /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/licencias/2/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49540 - "POST /api/v1/licencias/2/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49540 - "OPTIONS /api/v1/licencias/2/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "POST /api/v1/licencias/2/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49535 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49535 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49541 - "OPTIONS /api/v1/licencias/modulos/4/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49541 - "PUT /api/v1/licencias/modulos/4/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49542 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49542 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49542 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49542 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/modulos/3/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "PUT /api/v1/licencias/modulos/3/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "GET /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/2/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "POST /api/v1/licencias/2/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "GET /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "GET /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49543 - "OPTIONS /api/v1/licencias/2/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "POST /api/v1/licencias/2/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/licencias/2/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49584 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49605 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "OPTIONS /api/v1/companias?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "GET /api/v1/companias?cliente_id=1 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49605 - "OPTIONS /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49605 - "GET /api/v1/companias/?cliente_id=1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "OPTIONS /api/v1/licencias/2/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "POST /api/v1/licencias/2/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49606 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "OPTIONS /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49606 - "GET /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "OPTIONS /api/v1/licencias/2/estado HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "PATCH /api/v1/licencias/2/estado HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49633 - "OPTIONS /api/v1/licencias/2/estado HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49633 - "PATCH /api/v1/licencias/2/estado HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49633 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49633 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49633 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49633 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50793 - "OPTIONS /api/v1/licencias/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50793 - "GET /api/v1/licencias/2 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54865 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54865 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54865 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54865 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54867 - "POST /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54868 - "POST /api/v1/clientes/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54868 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54868 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54868 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54867 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54868 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54868 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54867 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54868 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54880 - "POST /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54880 - "POST /api/v1/companias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54880 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54880 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54880 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54880 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54880 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54880 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54906 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54905 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "OPTIONS /api/v1/usuarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/usuarios HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54906 - "OPTIONS /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/usuarios/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54906 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54905 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54906 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54905 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54905 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54905 - "OPTIONS /api/v1/licencias/siguiente-numero HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54907 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54905 - "GET /api/v1/licencias/siguiente-numero HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:54907 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54906 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54911 - "POST /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54911 - "POST /api/v1/licencias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54911 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54911 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54913 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54913 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54913 - "OPTIONS /api/v1/licencias/3/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54914 - "POST /api/v1/licencias/3/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54914 - "POST /api/v1/licencias/3/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54914 - "OPTIONS /api/v1/companias?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54914 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54914 - "OPTIONS /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54914 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54919 - "OPTIONS /api/v1/licencias/modulos/5/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54919 - "PUT /api/v1/licencias/modulos/5/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54919 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:54919 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "OPTIONS /api/v1/licencias/modulos/6/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "PUT /api/v1/licencias/modulos/6/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "OPTIONS /api/v1/licencias/3/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "POST /api/v1/licencias/3/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "OPTIONS /api/v1/licencias/3/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54920 - "GET /api/v1/licencias/3/descargar HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54920 - "GET /api/v1/licencias/3/descargar HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54920 - "OPTIONS /api/v1/licencias/3/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54923 - "POST /api/v1/licencias/3/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:54923 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54923 - "OPTIONS /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54923 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54923 - "GET /api/v1/licencias/3/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55121 - "OPTIONS /api/v1/licencias/3/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55121 - "POST /api/v1/licencias/3/generar HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55121 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55121 - "GET /api/v1/licencias/3 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55121 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:55126 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "POST /api/v1/licencias/3/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55126 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "OPTIONS /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55126 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55127 - "OPTIONS /api/v1/licencias/3/archivos/5/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55127 - "GET /api/v1/licencias/3/archivos/5/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "GET /api/v1/licencias/3 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59072 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:59073 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "OPTIONS /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59073 - "GET /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53892 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53892 - "GET /api/v1/licencias/3 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57035 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57035 - "POST /api/v1/auth/login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57037 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:57037 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "OPTIONS /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57037 - "GET /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:55822 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55822 - "GET /api/v1/licencias/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:52603 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52603 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52603 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52603 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52603 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52603 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52605 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52605 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52605 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52605 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52605 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52605 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52606 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52611 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52606 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52606 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52614 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52614 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52615 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52614 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52615 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52619 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52619 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52619 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52619 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52619 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52619 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52619 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52619 - "OPTIONS /api/v1/licencias/3/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52620 - "POST /api/v1/licencias/3/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52620 - "OPTIONS /api/v1/companias?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52620 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52620 - "OPTIONS /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52620 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "OPTIONS /api/v1/licencias/modulos/7/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "PUT /api/v1/licencias/modulos/7/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "OPTIONS /api/v1/licencias/3/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52626 - "POST /api/v1/licencias/3/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52626 - "OPTIONS /api/v1/licencias/3/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "POST /api/v1/licencias/3/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52625 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "OPTIONS /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "OPTIONS /api/v1/licencias/3/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52625 - "GET /api/v1/licencias/3/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "GET /api/v1/licencias/3/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "OPTIONS /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52630 - "GET /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58908 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58908 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58908 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58908 - "GET /api/v1/clientes/ HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58911 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58911 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58911 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58911 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58911 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58911 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58921 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58921 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58921 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58921 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58922 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58922 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58929 - "POST /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58929 - "POST /api/v1/clientes/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58929 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58929 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58929 - "OPTIONS /api/v1/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58931 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58929 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58929 - "OPTIONS /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58931 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58929 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58932 - "POST /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58932 - "POST /api/v1/companias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58932 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58932 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58935 - "POST /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58935 - "POST /api/v1/companias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58935 - "GET /api/v1/companias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58935 - "GET /api/v1/companias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58935 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58935 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58935 - "OPTIONS /api/v1/licencias/siguiente-numero HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58940 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58935 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58940 - "GET /api/v1/licencias/siguiente-numero HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:58935 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58944 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "POST /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58946 - "POST /api/v1/licencias/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58946 - "OPTIONS /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58946 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58946 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58946 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58946 - "OPTIONS /api/v1/licencias/4/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "POST /api/v1/licencias/4/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58945 - "OPTIONS /api/v1/companias?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "GET /api/v1/companias?cliente_id=4 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58945 - "OPTIONS /api/v1/companias/?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "GET /api/v1/companias/?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "OPTIONS /api/v1/licencias/4/modulos/8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "DELETE /api/v1/licencias/4/modulos/8 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:58945 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58945 - "POST /api/v1/licencias/4/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58945 - "POST /api/v1/licencias/4/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58945 - "POST /api/v1/licencias/4/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58945 - "GET /api/v1/companias?cliente_id=4 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58945 - "GET /api/v1/companias/?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58951 - "OPTIONS /api/v1/licencias/modulos/9/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58951 - "PUT /api/v1/licencias/modulos/9/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58951 - "GET /api/v1/companias?cliente_id=4 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58951 - "GET /api/v1/companias/?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58952 - "OPTIONS /api/v1/licencias/modulos/10/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58952 - "PUT /api/v1/licencias/modulos/10/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58952 - "GET /api/v1/companias?cliente_id=4 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58952 - "GET /api/v1/companias/?cliente_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "OPTIONS /api/v1/licencias/modulos/11/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "PUT /api/v1/licencias/modulos/11/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "OPTIONS /api/v1/licencias/4/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "GET /api/v1/licencias/4/payload HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:58956 - "OPTIONS /api/v1/licencias/4/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58957 - "POST /api/v1/licencias/4/validar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58957 - "OPTIONS /api/v1/licencias/4/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "POST /api/v1/licencias/4/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58956 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "OPTIONS /api/v1/licencias/4/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "GET /api/v1/licencias/4/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58956 - "GET /api/v1/licencias/4/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58962 - "OPTIONS /api/v1/licencias/4/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58962 - "GET /api/v1/licencias/4/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58963 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58963 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "GET /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58968 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "GET /api/v1/licencias/4/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "OPTIONS /api/v1/licencias/4/archivos/7/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58968 - "GET /api/v1/licencias/4/archivos/7/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49612 - "OPTIONS /api/v1/licencias/4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49612 - "GET /api/v1/licencias/4 HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49614 - "OPTIONS /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "POST /api/v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "OPTIONS /api/v1/licencias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49614 - "OPTIONS /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49614 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "OPTIONS /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "OPTIONS /api/v1/clientes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "GET /api/v1/clientes HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49622 - "OPTIONS /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "GET /api/v1/clientes/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "OPTIONS /api/v1/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49622 - "OPTIONS /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49622 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49654 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49654 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49654 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49654 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49656 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49657 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49657 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49657 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49657 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49657 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "OPTIONS /api/v1/licencias/3/modulos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "POST /api/v1/licencias/3/modulos HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49657 - "OPTIONS /api/v1/companias?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49657 - "OPTIONS /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49657 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias?cliente_id=3 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49693 - "GET /api/v1/companias/?cliente_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "OPTIONS /api/v1/licencias/modulos/12/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49718 - "PUT /api/v1/licencias/modulos/12/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49867 - "PUT /api/v1/licencias/modulos/12/companias HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49867 - "OPTIONS /api/v1/licencias/3/generar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "POST /api/v1/licencias/3/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49869 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "OPTIONS /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "OPTIONS /api/v1/licencias/3/archivos/8/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49869 - "GET /api/v1/licencias/3/archivos/8/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49996 - "OPTIONS /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49996 - "GET /api/v1/licencias/3/payload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49997 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49997 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50043 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50043 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50043 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50043 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50045 - "POST /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50046 - "POST /api/v1/modulos/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50046 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50046 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50108 - "GET /api/v1/licencias HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50108 - "GET /api/v1/licencias/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50108 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50108 - "GET /api/v1/modulos HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50108 - "GET /api/v1/modulos/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50110 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50110 - "POST /api/v1/licencias/3/generar HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50110 - "GET /api/v1/licencias/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50110 - "GET /api/v1/licencias/3/archivos HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50128 - "OPTIONS /api/v1/licencias/3/archivos/9/descargar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50128 - "GET /api/v1/licencias/3/archivos/9/descargar HTTP/1.1" 200 OK

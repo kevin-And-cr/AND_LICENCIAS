@@ -1,0 +1,24 @@
+# FastAPI & ASGI
+fastapi
+uvicorn[standard]
+
+# SQL Server
+pyodbc
+sqlalchemy
+alembic
+
+# Auth & Seguridad
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+
+# Firma digital ED25519
+cryptography
+
+# Configuración
+pydantic
+pydantic-settings
+python-dotenv
+
+# Utilidades
+httpx
