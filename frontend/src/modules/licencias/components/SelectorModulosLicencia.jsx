@@ -14,17 +14,21 @@ import { useToast } from "../../../store/ToastContext";
 import { api } from "../../../services/api";
 import { Button } from "../../../components/ui/Button";
 import { Spinner } from "../../../components/ui/Spinner";
+import { getDefaultMaxCias, resolveMaxCias } from "../utils/companyLimit";
 
 const BRAND = "#F48124";
 
-export function SelectorModulosLicencia({ licenciaId, modulosAsignados, onModuloAgregado, isDark }) {
+export function SelectorModulosLicencia({ licenciaId, modulosAsignados, onModuloAgregado, isDark, clienteId }) {
   const t = tk(isDark);
   const toast = useToast();
   const [todosModulos, setTodosModulos] = useState([]);
+  const [companiasCliente, setCompaniasCliente] = useState([]);
   const [loading, setLoading] = useState(true);
   const [seleccionado, setSeleccionado] = useState(null);
   const [maxCias, setMaxCias] = useState(1);
   const [agregando, setAgregando] = useState(false);
+
+  const companiasActivas = companiasCliente.filter((c) => c.estado === "activo");
 
   useEffect(() => {
     api.get("/modulos")
@@ -32,6 +36,21 @@ export function SelectorModulosLicencia({ licenciaId, modulosAsignados, onModulo
       .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (!clienteId) return;
+    // Cargamos las compañías activas del cliente para no fijar un máximo artificial de 1.
+    api.get(`/companias?cliente_id=${clienteId}`)
+      .then((data) => {
+        const activas = Array.isArray(data) ? data.filter((c) => c.estado === "activo") : [];
+        setCompaniasCliente(data ?? []);
+        setMaxCias(getDefaultMaxCias(activas.length));
+      })
+      .catch(() => {
+        setCompaniasCliente([]);
+        setMaxCias(1);
+      });
+  }, [clienteId]);
 
   const asignadosIds = new Set(modulosAsignados.map((m) => m.modulo_id));
 
@@ -48,13 +67,14 @@ export function SelectorModulosLicencia({ licenciaId, modulosAsignados, onModulo
     if (!seleccionado) return;
     setAgregando(true);
     try {
+      const limite = resolveMaxCias(maxCias, companiasActivas.length);
       const data = await api.post(`/licencias/${licenciaId}/modulos`, {
         modulo_id: seleccionado,
-        cantidad_maxima_companias: Number(maxCias) || 1,
+        cantidad_maxima_companias: limite,
       });
       toast.success("Módulo agregado correctamente");
       setSeleccionado(null);
-      setMaxCias(1);
+      setMaxCias(getDefaultMaxCias(companiasActivas.length));
       onModuloAgregado(data);
     } catch (err) {
       toast.error(err.message ?? "Error al agregar módulo");
@@ -119,15 +139,21 @@ export function SelectorModulosLicencia({ licenciaId, modulosAsignados, onModulo
 
       {/* Cantidad máxima de compañías */}
       {seleccionado && (
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <label style={{ fontSize: 13, color: t.labelColor, whiteSpace: "nowrap" }}>
             Máx. compañías:
           </label>
           <input
-            type="number" min={1} style={{ ...inputStyle, width: 80 }}
+            type="number"
+            min={1}
+            max={Math.max(companiasActivas.length || 1, 1)}
+            style={{ ...inputStyle, width: 90 }}
             value={maxCias}
-            onChange={(e) => setMaxCias(e.target.value)}
+            onChange={(e) => setMaxCias(resolveMaxCias(e.target.value, companiasActivas.length))}
           />
+          <span style={{ fontSize: 11, color: t.textSecondary }}>
+            {companiasActivas.length || 0} activas disponibles
+          </span>
           <Button variant="primary" onClick={handleAgregar} loading={agregando} disabled={!seleccionado}>
             <PlusCircle size={14} style={{ marginRight: 5 }} />
             Agregar

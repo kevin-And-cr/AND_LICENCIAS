@@ -54,10 +54,13 @@ export function AsignadorCompaniasModulo({
   }, [companiasAsignadas]);
 
   const activas = companias.filter((c) => c.estado === "activo");
+  // El máximo real nunca debe superar las compañías activas del cliente; esto evita que el módulo
+  // quede bloqueado a una sola empresa cuando la licencia se asocia a varias compañías.
+  const maxReal = Math.min(Number(maxCias) || 1, Math.max(activas.length, 1));
 
   const agregarFila = () => {
-    if (filas.length >= maxCias) {
-      toast.warning(`Límite alcanzado: máximo ${maxCias} compañía(s) para este módulo`);
+    if (filas.length >= maxReal) {
+      toast.warning(`Límite alcanzado: máximo ${maxReal} compañía(s) para este módulo`);
       return;
     }
     setFilas((f) => [...f, { compania_id: "", fecha_vencimiento: "" }]);
@@ -104,7 +107,7 @@ export function AsignadorCompaniasModulo({
       {/* Contador */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <span style={{ fontSize: 12, color: t.textSecondary }}>
-          {filas.length} / {maxCias} compañía(s) asignada(s)
+          {filas.length} / {maxReal} compañía(s) asignada(s)
         </span>
         <Button variant="ghost" onClick={agregarFila} style={{ padding: "4px 10px", fontSize: 12 }}>
           <Plus size={13} style={{ marginRight: 4 }} />

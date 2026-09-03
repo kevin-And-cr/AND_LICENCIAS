@@ -1,1 +1,33 @@
-/LICENCIAMIENTOS.zip
+# Configuracion local y secretos
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+**/keys/*
+!**/keys/.gitkeep
+CONFIGURACION_INTERNA.md
+
+# Dependencias y entornos locales
+node_modules/
+**/node_modules/
+.venv/
+**/.venv/
+venv/
+**/venv/
+
+# Builds, caches y archivos temporales
+dist/
+**/dist/
+.vite/
+**/.vite/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.log
+*.tmp
+
+# Archivos locales y comprimidos
+*.zip

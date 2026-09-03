@@ -238,6 +238,16 @@ def agregar_modulo(db: Session, licencia_id: int, data: AgregarModuloRequest) ->
     if dup:
         raise HTTPException(status_code=400, detail="El módulo ya está asignado a esta licencia")
 
+    # Normalizamos el límite con el número real de compañías activas del cliente para evitar
+    # que un módulo quede limitado a 1 empresa aunque el cliente tenga varias activas.
+    companias_activas = db.execute(
+        text("SELECT COUNT(*) FROM dbo.companias WHERE cliente_id = :cid AND estado = 'activo'"),
+        {"cid": lic["cliente_id"]},
+    ).fetchone()[0]
+    max_companias = max(1, int(companias_activas))
+    if data.cantidad_maxima_companias <= 0 or data.cantidad_maxima_companias > max_companias:
+        data.cantidad_maxima_companias = max_companias
+
     db.execute(text("""
         INSERT INTO dbo.licencia_modulos (licencia_id, modulo_id, cantidad_maxima_companias)
         VALUES (:lid, :mid, :max)

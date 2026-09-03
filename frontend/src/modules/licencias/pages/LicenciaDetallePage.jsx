@@ -317,6 +317,7 @@ function TabModulos({ lic, onDetalleCambiado, t, isDark }) {
             modulosAsignados={lic.modulos ?? []}
             onModuloAgregado={onDetalleCambiado}
             isDark={isDark}
+            clienteId={lic.cliente_id}
           />
         </div>
       )}
