@@ -19,7 +19,6 @@ import { AsignadorCompaniasModulo } from "../components/AsignadorCompaniasModulo
 import { HistorialArchivosLicencia } from "../components/HistorialArchivosLicencia";
 
 const BRAND = "#F48124";
-const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/v1";
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -565,18 +564,7 @@ export function LicenciaDetallePage() {
 
   const handleDescargarUltima = async () => {
     try {
-      const token = localStorage.getItem("access_token");
-      const res = await fetch(`${BASE_URL}/licencias/${id}/descargar`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (!res.ok) throw new Error("No hay archivo generado");
-      const disposition = res.headers.get("Content-Disposition") ?? "";
-      const filename = disposition.match(/filename="(.+?)"/)?.[1] ?? `licencia_${id}.lic`;
-      const blob = await res.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = filename; a.click();
-      URL.revokeObjectURL(url);
+      await api.download(`/licencias/${id}/descargar`, `licencia_${id}.lic`);
     } catch (err) {
       toast.error(err.message ?? "No hay archivo generado aún");
     }

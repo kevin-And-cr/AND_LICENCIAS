@@ -781,6 +781,972 @@ LEFT JOIN dbo.companias comp
 ');
 GO
 
+/* =====================================================
+   11. PROCEDIMIENTOS ALMACENADOS
+===================================================== */
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_obtener
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        id,
+        nombre,
+        identificacion,
+        correo_contacto,
+        telefono_contacto,
+        estado,
+        creado_en
+    FROM dbo.clientes
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_listar
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        id,
+        nombre,
+        identificacion,
+        correo_contacto,
+        telefono_contacto,
+        estado,
+        creado_en
+    FROM dbo.clientes
+    ORDER BY nombre ASC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_crear
+    @nombre NVARCHAR(200),
+    @identificacion NVARCHAR(100) = NULL,
+    @correo_contacto NVARCHAR(255) = NULL,
+    @telefono_contacto NVARCHAR(50) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.clientes (
+        nombre,
+        identificacion,
+        correo_contacto,
+        telefono_contacto,
+        estado
+    )
+    VALUES (
+        @nombre,
+        @identificacion,
+        @correo_contacto,
+        @telefono_contacto,
+        @estado
+    );
+
+    DECLARE @id INT = CONVERT(INT, SCOPE_IDENTITY());
+
+    SELECT id, nombre, identificacion, correo_contacto, telefono_contacto, estado, creado_en
+    FROM dbo.clientes
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_actualizar
+    @id INT,
+    @nombre NVARCHAR(200),
+    @identificacion NVARCHAR(100) = NULL,
+    @correo_contacto NVARCHAR(255) = NULL,
+    @telefono_contacto NVARCHAR(50) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.clientes
+    SET nombre = @nombre,
+        identificacion = @identificacion,
+        correo_contacto = @correo_contacto,
+        telefono_contacto = @telefono_contacto,
+        estado = @estado
+    WHERE id = @id;
+
+    SELECT id, nombre, identificacion, correo_contacto, telefono_contacto, estado, creado_en
+    FROM dbo.clientes
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_eliminar
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.companias WHERE cliente_id = @id;
+    DELETE FROM dbo.clientes WHERE id = @id;
+
+    SELECT @@ROWCOUNT AS filas_afectadas;
+END;
+GO
+
+/* =====================================================
+   11. PROCEDIMIENTOS ALMACENADOS: COMPANÍAS
+===================================================== */
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_existe
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id FROM dbo.clientes WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_listar
+    @cliente_id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        co.id,
+        co.cliente_id,
+        cl.nombre AS nombre_cliente,
+        co.codigo_compania,
+        co.nombre_compania,
+        co.identificacion,
+        co.estado,
+        co.creado_en
+    FROM dbo.companias co
+    INNER JOIN dbo.clientes cl ON co.cliente_id = cl.id
+    WHERE (@cliente_id IS NULL OR co.cliente_id = @cliente_id)
+    ORDER BY CASE WHEN @cliente_id IS NULL THEN cl.nombre ELSE '' END ASC, co.nombre_compania ASC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_obtener
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        co.id,
+        co.cliente_id,
+        cl.nombre AS nombre_cliente,
+        co.codigo_compania,
+        co.nombre_compania,
+        co.identificacion,
+        co.estado,
+        co.creado_en
+    FROM dbo.companias co
+    INNER JOIN dbo.clientes cl ON co.cliente_id = cl.id
+    WHERE co.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_existe
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id FROM dbo.companias WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_conflicto
+    @cliente_id INT,
+    @codigo_compania NVARCHAR(80),
+    @id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT id
+    FROM dbo.companias
+    WHERE cliente_id = @cliente_id
+      AND codigo_compania = @codigo_compania
+      AND (@id IS NULL OR id <> @id);
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_crear
+    @cliente_id INT,
+    @codigo_compania NVARCHAR(80),
+    @nombre_compania NVARCHAR(200),
+    @identificacion NVARCHAR(100) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.companias (
+        cliente_id,
+        codigo_compania,
+        nombre_compania,
+        identificacion,
+        estado
+    )
+    VALUES (
+        @cliente_id,
+        @codigo_compania,
+        @nombre_compania,
+        @identificacion,
+        @estado
+    );
+
+    DECLARE @id INT = SCOPE_IDENTITY();
+
+    SELECT
+        co.id,
+        co.cliente_id,
+        cl.nombre AS nombre_cliente,
+        co.codigo_compania,
+        co.nombre_compania,
+        co.identificacion,
+        co.estado,
+        co.creado_en
+    FROM dbo.companias co
+    INNER JOIN dbo.clientes cl ON co.cliente_id = cl.id
+    WHERE co.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_actualizar
+    @id INT,
+    @cliente_id INT,
+    @codigo_compania NVARCHAR(80),
+    @nombre_compania NVARCHAR(200),
+    @identificacion NVARCHAR(100) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.companias
+    SET cliente_id = @cliente_id,
+        codigo_compania = @codigo_compania,
+        nombre_compania = @nombre_compania,
+        identificacion = @identificacion,
+        estado = @estado
+    WHERE id = @id;
+
+    SELECT
+        co.id,
+        co.cliente_id,
+        cl.nombre AS nombre_cliente,
+        co.codigo_compania,
+        co.nombre_compania,
+        co.identificacion,
+        co.estado,
+        co.creado_en
+    FROM dbo.companias co
+    INNER JOIN dbo.clientes cl ON co.cliente_id = cl.id
+    WHERE co.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_eliminar
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.companias WHERE id = @id;
+
+    SELECT @@ROWCOUNT AS filas_afectadas;
+END;
+GO
+
+/* =====================================================
+   11. PROCEDIMIENTOS ALMACENADOS: ROLES
+===================================================== */
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_listar
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id, codigo, nombre, descripcion, estado, creado_en
+    FROM dbo.roles
+    ORDER BY nombre ASC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_obtener
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id, codigo, nombre, descripcion, estado, creado_en
+    FROM dbo.roles
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_existe
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id FROM dbo.roles WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_conflicto
+    @codigo NVARCHAR(80),
+    @id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id
+    FROM dbo.roles
+    WHERE codigo = @codigo
+      AND (@id IS NULL OR id <> @id);
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_crear
+    @codigo NVARCHAR(80),
+    @nombre NVARCHAR(150),
+    @descripcion NVARCHAR(500) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.roles (codigo, nombre, descripcion, estado)
+    VALUES (@codigo, @nombre, @descripcion, @estado);
+
+    DECLARE @id INT = SCOPE_IDENTITY();
+
+    SELECT id, codigo, nombre, descripcion, estado, creado_en
+    FROM dbo.roles
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_actualizar
+    @id INT,
+    @codigo NVARCHAR(80),
+    @nombre NVARCHAR(150),
+    @descripcion NVARCHAR(500) = NULL,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.roles
+    SET codigo = @codigo,
+        nombre = @nombre,
+        descripcion = @descripcion,
+        estado = @estado
+    WHERE id = @id;
+
+    SELECT id, codigo, nombre, descripcion, estado, creado_en
+    FROM dbo.roles
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_roles_eliminar
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.rol_permisos WHERE rol_id = @id;
+    DELETE FROM dbo.usuario_roles WHERE rol_id = @id;
+    DELETE FROM dbo.roles WHERE id = @id;
+
+    SELECT @@ROWCOUNT AS filas_afectadas;
+END;
+GO
+
+/* =====================================================
+   11. PROCEDIMIENTOS ALMACENADOS: MÓDULOS
+===================================================== */
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_listar
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        m.id,
+        m.codigo,
+        m.nombre,
+        m.descripcion,
+        m.modulo_padre_id,
+        p.nombre AS nombre_padre,
+        m.tipo_modulo,
+        m.ruta,
+        m.icono,
+        m.orden,
+        m.requiere_jobs,
+        m.estado,
+        m.creado_en,
+        m.actualizado_en
+    FROM dbo.modulos m
+    LEFT JOIN dbo.modulos p ON p.id = m.modulo_padre_id
+    ORDER BY m.orden ASC, m.nombre ASC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_obtener
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        m.id,
+        m.codigo,
+        m.nombre,
+        m.descripcion,
+        m.modulo_padre_id,
+        p.nombre AS nombre_padre,
+        m.tipo_modulo,
+        m.ruta,
+        m.icono,
+        m.orden,
+        m.requiere_jobs,
+        m.estado,
+        m.creado_en,
+        m.actualizado_en
+    FROM dbo.modulos m
+    LEFT JOIN dbo.modulos p ON p.id = m.modulo_padre_id
+    WHERE m.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_existe
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id FROM dbo.modulos WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_conflicto
+    @codigo NVARCHAR(80),
+    @id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id
+    FROM dbo.modulos
+    WHERE codigo = @codigo
+      AND (@id IS NULL OR id <> @id);
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_crear
+    @codigo NVARCHAR(80),
+    @nombre NVARCHAR(150),
+    @descripcion NVARCHAR(500) = NULL,
+    @modulo_padre_id INT = NULL,
+    @tipo_modulo NVARCHAR(50),
+    @ruta NVARCHAR(255) = NULL,
+    @icono NVARCHAR(50) = NULL,
+    @orden INT,
+    @requiere_jobs BIT,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.modulos (
+        codigo,
+        nombre,
+        descripcion,
+        modulo_padre_id,
+        tipo_modulo,
+        ruta,
+        icono,
+        orden,
+        requiere_jobs,
+        estado
+    )
+    VALUES (
+        @codigo,
+        @nombre,
+        @descripcion,
+        @modulo_padre_id,
+        @tipo_modulo,
+        @ruta,
+        @icono,
+        @orden,
+        @requiere_jobs,
+        @estado
+    );
+
+    DECLARE @id INT = SCOPE_IDENTITY();
+
+    SELECT
+        m.id,
+        m.codigo,
+        m.nombre,
+        m.descripcion,
+        m.modulo_padre_id,
+        p.nombre AS nombre_padre,
+        m.tipo_modulo,
+        m.ruta,
+        m.icono,
+        m.orden,
+        m.requiere_jobs,
+        m.estado,
+        m.creado_en,
+        m.actualizado_en
+    FROM dbo.modulos m
+    LEFT JOIN dbo.modulos p ON p.id = m.modulo_padre_id
+    WHERE m.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_actualizar
+    @id INT,
+    @codigo NVARCHAR(80),
+    @nombre NVARCHAR(150),
+    @descripcion NVARCHAR(500) = NULL,
+    @modulo_padre_id INT = NULL,
+    @tipo_modulo NVARCHAR(50),
+    @ruta NVARCHAR(255) = NULL,
+    @icono NVARCHAR(50) = NULL,
+    @orden INT,
+    @requiere_jobs BIT,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.modulos
+    SET codigo = @codigo,
+        nombre = @nombre,
+        descripcion = @descripcion,
+        modulo_padre_id = @modulo_padre_id,
+        tipo_modulo = @tipo_modulo,
+        ruta = @ruta,
+        icono = @icono,
+        orden = @orden,
+        requiere_jobs = @requiere_jobs,
+        estado = @estado,
+        actualizado_en = SYSUTCDATETIME()
+    WHERE id = @id;
+
+    SELECT
+        m.id,
+        m.codigo,
+        m.nombre,
+        m.descripcion,
+        m.modulo_padre_id,
+        p.nombre AS nombre_padre,
+        m.tipo_modulo,
+        m.ruta,
+        m.icono,
+        m.orden,
+        m.requiere_jobs,
+        m.estado,
+        m.creado_en,
+        m.actualizado_en
+    FROM dbo.modulos m
+    LEFT JOIN dbo.modulos p ON p.id = m.modulo_padre_id
+    WHERE m.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_eliminar
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @hijos INT = (
+        SELECT TOP 1 id FROM dbo.modulos WHERE modulo_padre_id = @id
+    );
+
+    IF @hijos IS NOT NULL
+    BEGIN
+        SELECT 0 AS filas_afectadas;
+        RETURN;
+    END;
+
+    DELETE FROM dbo.modulos WHERE id = @id;
+
+    SELECT @@ROWCOUNT AS filas_afectadas;
+END;
+GO
+
+/* =====================================================
+   11. PROCEDIMIENTOS ALMACENADOS: LICENCIAS
+===================================================== */
+
+CREATE OR ALTER PROCEDURE dbo.usp_clientes_estado
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    SELECT id, estado FROM dbo.clientes WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_listar
+    @cliente_id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT l.id, l.cliente_id,
+           cl.nombre AS nombre_cliente,
+           cl.estado AS estado_cliente,
+           l.numero_licencia,
+           l.fecha_emision,
+           l.estado,
+           l.tipo_licencia,
+           l.ambiente,
+           l.cantidad_maxima_usuarios,
+           CAST(l.permite_jobs_segundo_plano AS BIT) AS permite_jobs_segundo_plano,
+           CAST(l.permite_api AS BIT) AS permite_api,
+           l.observaciones,
+           l.creado_por,
+           l.creado_en,
+           l.actualizado_en
+    FROM dbo.licencias l
+    INNER JOIN dbo.clientes cl ON cl.id = l.cliente_id
+    WHERE (@cliente_id IS NULL OR l.cliente_id = @cliente_id)
+    ORDER BY l.creado_en DESC;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_obtener
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT l.id, l.cliente_id,
+           cl.nombre AS nombre_cliente,
+           cl.estado AS estado_cliente,
+           l.numero_licencia,
+           l.fecha_emision,
+           l.estado,
+           l.tipo_licencia,
+           l.ambiente,
+           l.cantidad_maxima_usuarios,
+           CAST(l.permite_jobs_segundo_plano AS BIT) AS permite_jobs_segundo_plano,
+           CAST(l.permite_api AS BIT) AS permite_api,
+           l.observaciones,
+           l.creado_por,
+           l.creado_en,
+           l.actualizado_en
+    FROM dbo.licencias l
+    INNER JOIN dbo.clientes cl ON cl.id = l.cliente_id
+    WHERE l.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_conflicto
+    @numero_licencia NVARCHAR(80),
+    @id INT = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT id
+    FROM dbo.licencias
+    WHERE numero_licencia = @numero_licencia
+      AND (@id IS NULL OR id <> @id);
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_crear
+    @cliente_id INT,
+    @numero_licencia NVARCHAR(80),
+    @tipo_licencia NVARCHAR(50),
+    @ambiente NVARCHAR(50),
+    @cantidad_maxima_usuarios INT,
+    @permite_jobs_segundo_plano BIT,
+    @permite_api BIT,
+    @observaciones NVARCHAR(500) = NULL,
+    @creado_por INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.licencias (
+        cliente_id,
+        numero_licencia,
+        tipo_licencia,
+        ambiente,
+        cantidad_maxima_usuarios,
+        permite_jobs_segundo_plano,
+        permite_api,
+        observaciones,
+        estado,
+        creado_por
+    )
+    VALUES (
+        @cliente_id,
+        @numero_licencia,
+        @tipo_licencia,
+        @ambiente,
+        @cantidad_maxima_usuarios,
+        @permite_jobs_segundo_plano,
+        @permite_api,
+        @observaciones,
+        'borrador',
+        @creado_por
+    );
+
+    DECLARE @id INT = SCOPE_IDENTITY();
+
+    SELECT l.id, l.cliente_id,
+           cl.nombre AS nombre_cliente,
+           cl.estado AS estado_cliente,
+           l.numero_licencia,
+           l.fecha_emision,
+           l.estado,
+           l.tipo_licencia,
+           l.ambiente,
+           l.cantidad_maxima_usuarios,
+           CAST(l.permite_jobs_segundo_plano AS BIT) AS permite_jobs_segundo_plano,
+           CAST(l.permite_api AS BIT) AS permite_api,
+           l.observaciones,
+           l.creado_por,
+           l.creado_en,
+           l.actualizado_en
+    FROM dbo.licencias l
+    INNER JOIN dbo.clientes cl ON cl.id = l.cliente_id
+    WHERE l.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_actualizar
+    @id INT,
+    @numero_licencia NVARCHAR(80),
+    @tipo_licencia NVARCHAR(50),
+    @ambiente NVARCHAR(50),
+    @cantidad_maxima_usuarios INT,
+    @permite_jobs_segundo_plano BIT,
+    @permite_api BIT,
+    @observaciones NVARCHAR(500) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.licencias
+    SET numero_licencia = @numero_licencia,
+        tipo_licencia = @tipo_licencia,
+        ambiente = @ambiente,
+        cantidad_maxima_usuarios = @cantidad_maxima_usuarios,
+        permite_jobs_segundo_plano = @permite_jobs_segundo_plano,
+        permite_api = @permite_api,
+        observaciones = @observaciones,
+        actualizado_en = SYSUTCDATETIME()
+    WHERE id = @id;
+
+    SELECT l.id, l.cliente_id,
+           cl.nombre AS nombre_cliente,
+           cl.estado AS estado_cliente,
+           l.numero_licencia,
+           l.fecha_emision,
+           l.estado,
+           l.tipo_licencia,
+           l.ambiente,
+           l.cantidad_maxima_usuarios,
+           CAST(l.permite_jobs_segundo_plano AS BIT) AS permite_jobs_segundo_plano,
+           CAST(l.permite_api AS BIT) AS permite_api,
+           l.observaciones,
+           l.creado_por,
+           l.creado_en,
+           l.actualizado_en
+    FROM dbo.licencias l
+    INNER JOIN dbo.clientes cl ON cl.id = l.cliente_id
+    WHERE l.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_cambiar_estado
+    @id INT,
+    @estado NVARCHAR(20)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE dbo.licencias
+    SET estado = @estado,
+        actualizado_en = SYSUTCDATETIME()
+    WHERE id = @id;
+
+    SELECT l.id, l.cliente_id,
+           cl.nombre AS nombre_cliente,
+           cl.estado AS estado_cliente,
+           l.numero_licencia,
+           l.fecha_emision,
+           l.estado,
+           l.tipo_licencia,
+           l.ambiente,
+           l.cantidad_maxima_usuarios,
+           CAST(l.permite_jobs_segundo_plano AS BIT) AS permite_jobs_segundo_plano,
+           CAST(l.permite_api AS BIT) AS permite_api,
+           l.observaciones,
+           l.creado_por,
+           l.creado_en,
+           l.actualizado_en
+    FROM dbo.licencias l
+    INNER JOIN dbo.clientes cl ON cl.id = l.cliente_id
+    WHERE l.id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_modulos_detalle
+    @licencia_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT lm.id,
+           lm.modulo_id,
+           lm.cantidad_maxima_companias,
+           m.codigo,
+           m.nombre,
+           m.descripcion,
+           m.tipo_modulo,
+           m.ruta,
+           m.icono,
+           m.orden,
+           CAST(m.requiere_jobs AS BIT) AS requiere_jobs,
+           p.id AS padre_id,
+           p.codigo AS codigo_padre,
+           p.nombre AS nombre_padre
+    FROM dbo.licencia_modulos lm
+    INNER JOIN dbo.modulos m ON m.id = lm.modulo_id
+    LEFT JOIN dbo.modulos p ON p.id = m.modulo_padre_id
+    WHERE lm.licencia_id = @licencia_id
+    ORDER BY m.orden, m.nombre;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_companias_modulo
+    @licencia_modulo_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT lmc.id,
+           lmc.compania_id,
+           lmc.fecha_vencimiento,
+           lmc.estado,
+           co.codigo_compania,
+           co.nombre_compania,
+           co.identificacion
+    FROM dbo.licencia_modulo_companias lmc
+    INNER JOIN dbo.companias co ON co.id = lmc.compania_id
+    WHERE lmc.licencia_modulo_id = @licencia_modulo_id
+    ORDER BY co.nombre_compania;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_modulos_obtener_por_id
+    @id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT id,
+           codigo,
+           nombre,
+           descripcion,
+           modulo_padre_id,
+           tipo_modulo,
+           ruta,
+           icono,
+           orden,
+           requiere_jobs,
+           estado,
+           creado_en,
+           actualizado_en
+    FROM dbo.modulos
+    WHERE id = @id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_companias_activas_cliente
+    @cliente_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT COUNT(*) AS total_companias_activas
+    FROM dbo.companias
+    WHERE cliente_id = @cliente_id
+      AND estado = 'activo';
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_modulo_existe
+    @licencia_id INT,
+    @modulo_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT id
+    FROM dbo.licencia_modulos
+    WHERE licencia_id = @licencia_id
+      AND modulo_id = @modulo_id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_modulo_existe_id
+    @licencia_modulo_id INT,
+    @licencia_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT lm.id
+    FROM dbo.licencia_modulos lm
+    WHERE lm.id = @licencia_modulo_id
+      AND lm.licencia_id = @licencia_id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_agregar_modulo
+    @licencia_id INT,
+    @modulo_id INT,
+    @cantidad_maxima_companias INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO dbo.licencia_modulos (licencia_id, modulo_id, cantidad_maxima_companias)
+    VALUES (@licencia_id, @modulo_id, @cantidad_maxima_companias);
+
+    SELECT CAST(SCOPE_IDENTITY() AS INT) AS id;
+END;
+GO
+
+CREATE OR ALTER PROCEDURE dbo.usp_licencias_quitar_modulo
+    @licencia_modulo_id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DELETE FROM dbo.licencia_modulo_companias
+    WHERE licencia_modulo_id = @licencia_modulo_id;
+
+    DELETE FROM dbo.licencia_modulos
+    WHERE id = @licencia_modulo_id;
+
+    SELECT 1 AS ok;
+END;
+GO
+
 /*
 =========================================================
  REGLAS QUE DEBEN VALIDARSE EN BACKEND
