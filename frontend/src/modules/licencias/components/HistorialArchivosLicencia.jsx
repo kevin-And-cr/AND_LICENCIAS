@@ -13,24 +13,6 @@ import { api } from "../../../services/api";
 import { Spinner } from "../../../components/ui/Spinner";
 import { Button } from "../../../components/ui/Button";
 
-const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8000/api/v1";
-
-async function descargarArchivo(licenciaId, archivoId, nombreArchivo) {
-  const token = localStorage.getItem("access_token");
-  const res = await fetch(
-    `${BASE_URL}/licencias/${licenciaId}/archivos/${archivoId}/descargar`,
-    { headers: { Authorization: `Bearer ${token}` } }
-  );
-  if (!res.ok) throw new Error("Error al descargar el archivo");
-  const blob = await res.blob();
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = nombreArchivo;
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
 export function HistorialArchivosLicencia({ licenciaId, isDark, recargar }) {
   const t = tk(isDark);
   const toast = useToast();
@@ -49,7 +31,10 @@ export function HistorialArchivosLicencia({ licenciaId, isDark, recargar }) {
 
   const handleDescargar = async (archivo) => {
     try {
-      await descargarArchivo(licenciaId, archivo.id, archivo.nombre_archivo);
+      await api.download(
+        `/licencias/${licenciaId}/archivos/${archivo.id}/descargar`,
+        archivo.nombre_archivo
+      );
       toast.success(`Descargando ${archivo.nombre_archivo}`);
     } catch (err) {
       toast.error(err.message ?? "Error al descargar archivo");
